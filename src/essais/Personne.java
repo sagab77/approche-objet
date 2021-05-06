@@ -1,9 +1,7 @@
-package entites;
-
-
-import java.util.Locale;
+package essais;
 
 public class Personne {
+
 
     private String nom, prenom, adresse;
 
@@ -49,13 +47,13 @@ public class Personne {
 
     }
 
-    public void  displayPrenom() {
+    public void displayPrenom() {
 
         System.out.println(prenom);
 
     }
 
-    public void  modif() {
+    public void modif() {
 
         System.out.println(adresse);
     }
