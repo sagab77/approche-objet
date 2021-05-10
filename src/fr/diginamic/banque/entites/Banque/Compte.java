@@ -1,4 +1,4 @@
-package fr.diginamic.banque.entites;
+package fr.diginamic.banque.entites.Banque;
 
 public class Compte  {
 
@@ -23,7 +23,7 @@ public class Compte  {
         return numCompte;
     }
 
-    public Compte(double solde) {
+    public Compte(int numCompte, double v, double solde) {
         this.solde = solde;
         this.numCompte = ct++;
     }
