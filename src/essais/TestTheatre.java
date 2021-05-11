@@ -12,11 +12,11 @@ public class TestTheatre {
 
         while(notFull) {
             int newClients = ThreadLocalRandom.current().nextInt(1,5);
-            notFull = moliere.inscrire(2500,25);
+            notFull = moliere.inscrire(4700,25);
 
         }
 
-        System.out.println("Total clients inscrit : " + moliere.inscrits);
+        System.out.println("Total clients inscrit : " + moliere.getInscrits());
         System.out.println("Total recette : " + moliere.recette + " €");
 
 

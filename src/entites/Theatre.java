@@ -14,6 +14,18 @@ public class Theatre {
         this.recette = recette;
     }
 
+    public int getCap_max() {
+        return cap_max;
+    }
+
+    public int getInscrits() {
+        return inscrits;
+    }
+
+    public double getRecette() {
+        return recette;
+    }
+
     public boolean inscrire(int clients, double prix) {
         int total = inscrits + clients;
 
@@ -25,8 +37,13 @@ public class Theatre {
             recette += prix * clients;
             return true;
         }
+
+
+
     }
-
-
 }
+
+
+
+
 
