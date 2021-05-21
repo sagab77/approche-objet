@@ -1,5 +1,7 @@
 package fr.diginamic.maps;
 
+import fr.diginamic.testenumeration.Continent;
+
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;
@@ -16,9 +18,9 @@ public class ComptagePayParContinent {
         paysArrayList.add(new Pays("Indonesie", 220, "Oceanie"));
         paysArrayList.add(new Pays("Australie", 20, "Oceanie"));
 
-        HashMap<String, Integer> paysParContinentMap = new HashMap<>();
+        HashMap<Continent, Integer> paysParContinentMap = new HashMap<>();
         for (Pays pays : paysArrayList) {
-            if (paysParContinentMap.containsKey(pays.getContinent()))
+            if (paysParContinentMap.equals(pays.getContinent()))
                 paysParContinentMap.put(pays.getContinent(), paysParContinentMap.get(pays.getContinent()) + 1);
             else {
                 paysParContinentMap.put(pays.getContinent(), 1);
@@ -26,7 +28,7 @@ public class ComptagePayParContinent {
         }
 
 
-        for (Map.Entry<String, Integer> stringIntegerEntry : paysParContinentMap.entrySet()) {
+        for (Map.Entry<Continent, Integer> stringIntegerEntry : paysParContinentMap.entrySet()) {
             System.out.println(stringIntegerEntry.getKey() + " : " + stringIntegerEntry.getValue());
         }
 

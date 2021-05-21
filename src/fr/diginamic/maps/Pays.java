@@ -1,26 +1,34 @@
 package fr.diginamic.maps;
 
-import java.util.ArrayList;
-import java.util.HashMap;
+import fr.diginamic.testenumeration.Continent;
 
 public class Pays {
 
-    String nom;
 
-    int nbHabitants;
-    String continent;
+    private String nom;
+    private int nombreHabitants;
+    private Continent continent;
+
+    public Pays(String nom, int nbHabitants, String continent) {
+        this.nom = nom;
+        this.nombreHabitants = nbHabitants;
+
+    }
+
+    public Pays(String france, int nbHabitants, Continent europe) {
+    }
+
+    public String getNom() {
+        return nom;
+    }
 
     @Override
     public String toString() {
         return "Pays{" +
                 "nom='" + nom + '\'' +
-                ", nbHabitants=" + nbHabitants +
-                ", continent='" + continent + '\'' +
+                ", nbHabitants=" + nombreHabitants +
+                ", continent=" + continent +
                 '}';
-    }
-
-    public String getNom() {
-        return nom;
     }
 
     public void setNom(String nom) {
@@ -28,24 +36,18 @@ public class Pays {
     }
 
     public int getNbHabitants() {
-        return nbHabitants;
+        return nombreHabitants;
     }
 
     public void setNbHabitants(int nbHabitants) {
-        this.nbHabitants = nbHabitants;
+        this.nombreHabitants = nbHabitants;
     }
 
-    public String getContinent() {
+    public Continent getContinent() {
         return continent;
     }
 
-    public void setContinent(String continent) {
-        this.continent = continent;
-    }
-
-    public Pays(String nom, int nbHabitants, String continent) {
-        this.nom = nom;
-        this.nbHabitants = nbHabitants;
+    public void setContinent(Continent continent) {
         this.continent = continent;
     }
 
@@ -55,4 +57,25 @@ public class Pays {
 
 
 
-}
+
+
+
+
+//    public boolean equals(Object o) {
+//        if (this.equals(o))
+//            return nom.equals(Pays o);
+//        if (o.equals(null))
+//            return false;
+//
+//        return false;
+    }
+
+
+
+
+
+
+
+
+
+
